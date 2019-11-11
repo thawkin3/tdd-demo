@@ -1,0 +1,19 @@
+{
+  "name": "tdd-demo",
+  "version": "1.0.0",
+  "description": "Test Driven Development example while building a caesar cipher",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "test",
+    "driven",
+    "development",
+    "tdd",
+    "caesar",
+    "cipher"
+  ],
+  "author": "Tyler Hawkins",
+  "license": "ISC"
+}
