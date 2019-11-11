@@ -1,3 +1,9 @@
 export const encode = (str, shiftAmount) => {
-  return str
+  const encryptedMessage = str.split('').map((character, index) => {
+		const code = str.charCodeAt(index)
+		const shiftedCode = code + shiftAmount
+		return String.fromCharCode(shiftedCode)
+  })
+  
+	return encryptedMessage.join('')
 }

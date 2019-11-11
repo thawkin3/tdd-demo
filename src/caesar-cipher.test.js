@@ -5,9 +5,10 @@ describe('caesar cipher', () => {
     expect(typeof(encode('abc', 1))).toBe('string')
   })
 
-  // it('shifts the A-Z characters by the correct amount', () => {
-
-  // })
+  it('shifts the A-Z characters by the correct amount', () => {
+    expect(encode('abc', 1)).toBe('bcd')
+    expect(encode('test', 2)).toBe('vguv')
+  })
 
   // it('does not affect non-alphabetic characters', () => {
 
