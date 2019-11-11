@@ -27,6 +27,11 @@ describe('caesar cipher', () => {
     expect(encode('abc', 28)).toBe('cde')
   })
 
+  it('handles shift values less than 0', () => {
+    expect(encode('abc', 0)).toBe('abc')
+    expect(encode('abc', -2)).toBe('yza')
+  })
+
   // it('handles bad input', () => {
 
   // })

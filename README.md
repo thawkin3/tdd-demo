@@ -16,4 +16,5 @@ It is set up to use Jest as the test runner and includes Babel to support newer 
 4. Maintains case
 5. Handles wrapping past the end of the alphabet
 6. Handles shift values greater than 26
-7. Handles bad input
+7. Handles shift values less than 0
+8. Handles bad input

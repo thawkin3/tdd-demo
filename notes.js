@@ -130,3 +130,35 @@ export const encode = (str, shiftAmount) => {
 })
 
 // code (no changes from TEST 5)
+
+
+/*********************************
+ *** TEST 7
+ ********************************/
+
+ // test
+ it('handles shift values less than 0', () => {
+  expect(encode('abc', 0)).toBe('abc')
+  expect(encode('abc', -2)).toBe('yza')
+})
+
+// code
+export const encode = (str, shiftAmount) => {
+  const encryptedMessage = str.split('').map((character, index) => {
+    const code = str.charCodeAt(index)
+    const moduloShiftAmount = (shiftAmount % 26) + 26
+
+    // 97-122 => a-z; 65-90 => A-Z
+    if (code >= 65 && code <= 90) {
+		  const shiftedCode = ((code + moduloShiftAmount - 65) % 26) + 65
+      return String.fromCharCode(shiftedCode)
+    } else if (code >= 97 && code <= 122) {
+		  const shiftedCode = ((code + moduloShiftAmount - 97) % 26) + 97
+      return String.fromCharCode(shiftedCode)
+    }
+
+    return character
+  })
+  
+	return encryptedMessage.join('')
+}
