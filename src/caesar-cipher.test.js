@@ -18,9 +18,9 @@ describe('caesar cipher', () => {
     expect(encode('aBc', 1)).toBe('bCd')
   })
 
-  // it('handles wrapping past the end of the alphabet', () => {
-
-  // })
+  it('handles wrapping past the end of the alphabet', () => {
+    expect(encode('xyz', 2)).toBe('zab')
+  })
 
   // it('handles shift values greater than 26', () => {
 
