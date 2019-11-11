@@ -117,3 +117,16 @@ export const encode = (str, shiftAmount) => {
   
 	return encryptedMessage.join('')
 }
+
+
+/*********************************
+ *** TEST 6
+ ********************************/
+
+ // test
+ it('handles shift values greater than 26', () => {
+  expect(encode('abc', 26)).toBe('abc')
+  expect(encode('abc', 28)).toBe('cde')
+})
+
+// code (no changes from TEST 5)

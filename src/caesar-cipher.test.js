@@ -22,9 +22,10 @@ describe('caesar cipher', () => {
     expect(encode('xyz', 2)).toBe('zab')
   })
 
-  // it('handles shift values greater than 26', () => {
-
-  // })
+  it('handles shift values greater than 26', () => {
+    expect(encode('abc', 26)).toBe('abc')
+    expect(encode('abc', 28)).toBe('cde')
+  })
 
   // it('handles bad input', () => {
 
