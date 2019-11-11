@@ -1,4 +1,8 @@
-export const encode = (str, shiftAmount) => {
+export const encode = (str = '', shiftAmount = 0) => {
+  if (typeof str !== 'string' || typeof shiftAmount !== 'number') {
+    return ''
+  }
+
   const encryptedMessage = str.split('').map((character, index) => {
     const code = str.charCodeAt(index)
     const moduloShiftAmount = (shiftAmount % 26) + 26

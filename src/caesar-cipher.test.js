@@ -32,7 +32,10 @@ describe('caesar cipher', () => {
     expect(encode('abc', -2)).toBe('yza')
   })
 
-  // it('handles bad input', () => {
-
-  // })
+  it('handles bad input', () => {
+    expect(encode()).toBe('')
+    expect(encode(1, 1)).toBe('')
+    expect(encode(1, 'abc')).toBe('')
+    expect(encode('abc')).toBe('abc')
+  })
 })
