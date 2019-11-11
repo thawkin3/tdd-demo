@@ -14,9 +14,9 @@ describe('caesar cipher', () => {
     expect(encode('abc123', 1)).toBe('bcd123')
   })
 
-  // it('maintains case', () => {
-
-  // })
+  it('maintains case', () => {
+    expect(encode('aBc', 1)).toBe('bCd')
+  })
 
   // it('handles wrapping past the end of the alphabet', () => {
 
