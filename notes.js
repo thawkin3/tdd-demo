@@ -33,3 +33,30 @@ export const encode = (str, shiftAmount) => {
   
 	return encryptedMessage.join('')
 }
+
+
+/*********************************
+ *** TEST 3
+ ********************************/
+
+// test
+it('does not affect non-alphabetic characters', () => {
+  expect(encode('abc123', 1)).toBe('bcd123')
+})
+
+// code
+export const encode = (str, shiftAmount) => {
+  const encryptedMessage = str.split('').map((character, index) => {
+    const code = str.charCodeAt(index)
+
+    // 97-122 => a-z
+    if (code >= 97 && code <= 122) {
+		  const shiftedCode = code + shiftAmount
+      return String.fromCharCode(shiftedCode)
+    }
+
+    return character
+  })
+  
+	return encryptedMessage.join('')
+}

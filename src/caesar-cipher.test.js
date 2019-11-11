@@ -10,9 +10,9 @@ describe('caesar cipher', () => {
     expect(encode('test', 2)).toBe('vguv')
   })
 
-  // it('does not affect non-alphabetic characters', () => {
-
-  // })
+  it('does not affect non-alphabetic characters', () => {
+    expect(encode('abc123', 1)).toBe('bcd123')
+  })
 
   // it('maintains case', () => {
 
